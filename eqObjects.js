@@ -28,7 +28,6 @@ const eqObjects = function(object1, object2) {
     if (typeof object1[element] === "object" && typeof object2[element] === "object") {
       return eqObjects(object1[element],object2[element]);
     }
-    eqObjects(object1[element],object2[element]);
     if (Array.isArray(object1[element]) && Array.isArray(object2[element])) {
       return eqArrays(object1[element],object2[element]);
     }
