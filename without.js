@@ -35,4 +35,4 @@ function without(array, remove) {
   return newArr;
 }
 
-
+module.exports = without;

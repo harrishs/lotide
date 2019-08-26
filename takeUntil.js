@@ -31,10 +31,11 @@ function assertArraysEqual(arr1, arr2) {
   }
 }
 
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
-const results2 = takeUntil(data1, x => x < 5);
-assertArraysEqual(results1, [1,2,5,7,2]);
-assertArraysEqual(results2, [1,2,5,7,2,24,52,42]);
-assertArraysEqual(results2, []);
+// const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+// const results1 = takeUntil(data1, x => x < 0);
+// const results2 = takeUntil(data1, x => x < 5);
+// assertArraysEqual(results1, [1,2,5,7,2]);
+// assertArraysEqual(results2, [1,2,5,7,2,24,52,42]);
+// assertArraysEqual(results2, []);
 
+module.exports = takeUntil;

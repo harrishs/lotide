@@ -25,11 +25,14 @@ const eqObjects = function(object1, object2) {
     return false;
   }
   for (let element of keys1) {
-    if (typeof object1[element] === "object" && typeof object2[element] === "object") {
-      return eqObjects(object1[element],object2[element]);
+    if (
+      typeof object1[element] === "object" &&
+      typeof object2[element] === "object"
+    ) {
+      return eqObjects(object1[element], object2[element]);
     }
     if (Array.isArray(object1[element]) && Array.isArray(object2[element])) {
-      return eqArrays(object1[element],object2[element]);
+      return eqArrays(object1[element], object2[element]);
     }
     if (object1[element] !== object2[element]) {
       return false;
@@ -37,8 +40,4 @@ const eqObjects = function(object1, object2) {
   }
   return true;
 };
-
-console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }) ,// => true
-
-  eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }) ,// => false
-  eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }));
+module.exports = eqObjects;

@@ -14,3 +14,5 @@ function findKeyByValue(object, value) {
     }
   }
 }
+
+module.exports = findKeyByValue;
