@@ -1,3 +1,7 @@
+let middle = require("./middle");
+let tail = require("./tail");
+let takeUntil = require("./takeUntil");
+let without = require("./without");
 module.exports = {
   assertArraysEqual: require("./assertArraysEqual"),
   assertEqual: require("./assertEqual"),
@@ -12,8 +16,8 @@ module.exports = {
   head: require("./head"),
   letterPosition: require("./letterPosition"),
   map: require("./map"),
-  middle: require("./middle"),
-  tail: require("./tail"),
-  takeUntil: require("./takeUntil"),
-  without: require("./without")
+  middle,
+  tail,
+  takeUntil,
+  without
 };
